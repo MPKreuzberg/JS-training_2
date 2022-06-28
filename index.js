@@ -68,10 +68,17 @@ console.log();
 const data5 = { a: 1, b: 1 };
 const data51 = { a: 1, b: 1 };
 const data52 = { a: 1, b: 2 };
+// function isEqual(obj1, obj2) {
+// 	return JSON.stringify(obj1) === JSON.stringify(obj2);
+// }
 
-function isEqual(obj1, obj2) {
-    return JSON.stringify(obj1) === JSON.stringify(obj2);
-} 
+
+const isEqual = (obj1, obj2) => {
+	return Object.keys(obj1).every((key) => obj1[key] === obj2[key]);
+}
+
+
+
 console.log(isEqual(data5, data51)); // true
 console.log(isEqual(data5, data52)); // false
 
