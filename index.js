@@ -1,6 +1,8 @@
 //1
 const data = { a: 1 };
-// Here i check if the object is not null and if the type of the object is object.If the object is not null and the type of the object is object, the code returns true.If the object is null or the type of the object is not object, the code returns false.
+// Here i check if the object is not null and if the type of the object is object.
+//If the object is not null and the type of the object is object, the code returns true.
+//If the object is null or the type of the object is not object, the code returns false.
 
 function isPlainObject(obj) {
 	return obj !== null && typeof obj === "object" && obj.constructor === Object;
@@ -18,7 +20,9 @@ console.log(isPlainObject1([1, 2, 3]));
 //2
 
 const data2 = { a: 1, b: 2 };
-// .keys returns the names of the enumerable string properties and methods of an object. .map calls a defined callback function on each element of an array, and returns an array that contains the results.
+// .keys returns the names of the enumerable string properties and methods of an object. 
+//.map calls a defined callback function on each element of an array, and returns an array 
+//that contains the results.
 const makePairs = (obj) => Object.keys(obj).map((key) => [key, obj[key]]);
 
 function makePairs1(obj) {
