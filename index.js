@@ -5,11 +5,11 @@ const data = { a: 1 };
 //If the object is null or the type of the object is not object, the code returns false.
 
 function isPlainObject(obj) {
-	return obj !== null && typeof obj === "object" && obj.constructor === Object;
+	return obj !== null && typeof obj === "object";
 }
 
 const isPlainObject1 = (obj) =>
-	obj !== null && typeof obj === "object" && obj.constructor === Object;
+	obj !== null && typeof obj === "object"; 
 
 console.log(isPlainObject({ a: 1 })); // true
 console.log(isPlainObject([1, 2, 3]));
